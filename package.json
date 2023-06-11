@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-server-component",
+  "name": "eslint-plugin-server-component-rules",
   "version": "0.0.0",
   "description": "eslint for nextjs server component rule",
   "main": "./plugins/index.js",
