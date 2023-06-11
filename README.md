@@ -1,4 +1,4 @@
-# eslint-plugin-server-component
+# eslint-plugin-server-component-rules
 
 Nextjs13의 server component, client component에 존재하는 룰을 eslint로 강제하기 위해서 만든 패키지입니다.
 
@@ -11,7 +11,7 @@ Nextjs13의 server component, client component에 존재하는 룰을 eslint로 
 - jsx 내부에서 event handler를 이용할 수 없는것
 - client component에서 server component를 이용할 수 없는것
 
-이 룰들을 어기면  `client component에서 server component를 이용할 수 없는것`을 제외하고 빌드타임에 에러가 발생하게 되는데요. 
+이 룰들을 어기면 `client component에서 server component를 이용할 수 없는것`을 제외하고 빌드타임에 에러가 발생하게 되는데요.
 
 이것을 개발하게 된 계기가 개발할떄 `에디터` 단위에서 바로 에러를 경고할 수 있도록 추가하여 server component 개발의 생산성을 올리기 위함이였습니다.
 
@@ -24,27 +24,26 @@ npm install -D eslint-plugin-server-component
 ```
 
 ### eslintrc.js
+
 ```jsx
 module.exports = {
-  extends: ['next/core-web-vitals'],
-  plugins: ['server-component'],
+  extends: ["next/core-web-vitals"],
+  plugins: ["server-component-rules"],
   rules: {
-    'server-component/no-import-use-client': ['error', { middle: 'server' }],
-    'server-component/file-name': ['error', { middle: 'server' }],
-    'server-component/no-use-react-hook': ['error'],
-    'server-component/no-use-browser-api': ['error'],
-    'server-component/no-use-event-handler': ['error'],
+    "server-component/no-import-use-client": ["error", { middle: "server" }],
+    "server-component/file-name": ["error", { middle: "server" }],
+    "server-component/no-use-react-hook": ["error"],
+    "server-component/no-use-browser-api": ["error"],
+    "server-component/no-use-event-handler": ["error"],
   },
 };
 ```
 
 plugins에 `server-component` 추가후 `rules`추가
 
-
 ## server-component/file-name
 
 파일네임 컨벤션을 지정하기 위한 rule입니다. middle이라는 변수에 `server`를 하면 서버 컴포넌트에서는 `*.server.tsx|jsx` 처럼 컨벤션이 지정됩니다.
-
 
 ## server-component/no-import-use-client
 
