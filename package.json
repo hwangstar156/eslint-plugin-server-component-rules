@@ -2,16 +2,19 @@
   "name": "eslint-plugin-server-component-rules",
   "version": "0.0.0",
   "description": "eslint for nextjs server component rule",
-  "main": "index.js",
+  "main": "./plugins/index.js",
   "scripts": {
     "lint": "eslint **/*.{js,ts,tsx}"
   },
-  "keywords": ['eslint', 'server-component'],
+  "keywords": [
+    "eslint",
+    "server-component"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hwangstar156/eslint-plugin-server-component-rules.git"
   },
-  "author": "hwangstar156",
+  "author": "hwangjungmin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hwangstar156/eslint-plugin-server-component-rules/issues"
