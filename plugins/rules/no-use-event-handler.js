@@ -1,4 +1,4 @@
-export const noUseEventHandler = {
+module.exports = {
   meta: {
     type: 'problem',
     fixable: true,

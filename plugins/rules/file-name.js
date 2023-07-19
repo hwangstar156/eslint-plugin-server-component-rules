@@ -1,4 +1,4 @@
-export const fileNameRules = {
+module.exports = {
   meta: {
     type: 'problem',
     fixable: true,

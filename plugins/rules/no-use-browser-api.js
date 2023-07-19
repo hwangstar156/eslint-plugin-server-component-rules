@@ -1,4 +1,4 @@
-export const noUserBrowserApi = {
+module.exports = {
   meta: {
     type: 'problem',
     fixable: true,

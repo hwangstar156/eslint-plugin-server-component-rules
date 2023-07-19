@@ -1,4 +1,4 @@
-export const noImportUseClientRules = {
+module.exports = {
   meta: {
     type: 'problem',
     fixable: true,

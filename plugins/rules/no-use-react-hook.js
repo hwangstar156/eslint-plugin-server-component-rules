@@ -1,4 +1,4 @@
-export const noUseReactHook = {
+module.exports = {
   meta: {
     type: 'problem',
     fixable: true,
